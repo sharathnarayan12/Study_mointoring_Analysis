@@ -1,0 +1,50 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000709;
+    text-align: center;
+    margin: 100px;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 45px;
+    padding-bottom: 10px;
+    color: aqua;
+}
+
+.led-red,
+.led-green {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.led-red {
+    background-color: #F00;
+}
+
+.led-green {
+    background-color: #058e3e;
+}
+
+p {
+    color: aqua;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

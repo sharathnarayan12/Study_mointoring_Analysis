@@ -14,7 +14,7 @@ class HolisticDetection:
         self.mp_holistic = mp.solutions.holistic
         self.mp_drawing = mp.solutions.drawing_utils
         self.model = self.mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5)
-        self.cap = cv2.VideoCapture(0)
+        self.cap = cv2.VideoCapture(2)
 
     def __del__(self):
         self.cap.release()
@@ -46,6 +46,11 @@ class HolisticDetection:
                                                                     circle_radius=4),
                                         self.mp_drawing.DrawingSpec(color=(245, 66, 230), thickness=2,
                                                                     circle_radius=2))
+    def Not_Reading_print(self):
+        print("NOT READING !!!!!!!!!!!!!!!!")
+
+    def Reading_print(self):
+        print("READING !!!!!!!!!!!!!!!!")
 
     def run_detection(self):
         while self.cap.isOpened():
@@ -64,9 +69,11 @@ class HolisticDetection:
                 # Y-coordinate for the horizontal line
                 y_coord = 200
                 if nose_y > y_coord:
-                    print("Reading")
+                    # print("Reading")
+                    self.Reading_print()
                 else:
-                    print("NOT Reading")
+                    # print("NOT Reading")
+                    self.Not_Reading_print()
             else:
                 print("NO student detected !!!!!")
 

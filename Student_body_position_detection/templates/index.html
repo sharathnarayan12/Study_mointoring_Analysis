@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
     <title>Mointoring_Device</title>
 </head>
 <body>
     <h1>Student Study Monitoring Device</h1>
     <img src="{{ url_for('video_feed') }}" alt="video feed">
+    <div class="led-box">
+        <div class="led-green"></div>
+        <p>Reading</p>
+      <div class="led-box">
+        <div class="led-red"></div>
+        <p>Not Reading</p>
+    </div>
+    <script src="{{ url_for('static',filename='=js/scripts.js') }}"></script>
 </body>
 </html>
