@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
-    <title>Mointoring_Device</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar Chart</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<!-- Include Chart.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>Student Study Monitoring Device</h1>
-    <img src="{{ url_for('video_feed') }}" alt="video feed">
-    <div class="led-box">
-        <div class="led-green"></div>
-        <p>Reading</p>
-      <div class="led-box">
-        <div class="led-red"></div>
-        <p>Not Reading</p>
+<h1 class="big-header">Radar Chart</h1>
+<div class="row roww" id="container">   
+    <div class="big-div big-div1" id="bigDiv1">
+        <div class="row1">
+          <div class="attached-div green">
+            <button class="gree"></button>
+          </div>
+          <div class="attached-div green1">Sucess</div>
+        </div>
+        <div class="row1">
+          <div class="attached-div red">
+            <button class="ree"></button>
+          </div>
+          <div class="attached-div red1">Failure</div>
+        </div>
     </div>
-    <script src="{{ url_for('static',filename='=js/scripts.js') }}"></script>
+    <div class="big-div big-div2" id="bigDiv2"></div>
+</div>
+
+<div class="row">
+  <div class="big-div big-div3" id="bigDiv3">
+    BIg 3
+  </div>
+
+  <div class="big-div big-div4" id="bigDiv4"></div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
